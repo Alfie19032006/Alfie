@@ -129,6 +129,30 @@
 
                 }
             </script>
+
+    <script type="text/javascript">
+        function drawChart(){
+            var data=new google.visualization.DataTable();
+            data.addColumn('Number','Age');
+            data.addColumn('Number','Salary');
+
+            data.addRows([
+                [25,40000],
+                [30,50000],
+                [35,60000]
+                [40,75000],
+                [45,80000],
+                [50,90000],
+            ]);
+            var options={
+                title:'Age vs. Salary',
+                hAxis:{title:'Age'},
+                vAxis:{title:'Salary'}
+            };
+            var chart=new google.visualtization.ScatterChart(document.getElementById('chart_div'));
+            chart.draw(data,options);
+        }
+    </script>
 </head>
         
             <p class="ex1"
